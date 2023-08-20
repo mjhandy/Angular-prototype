@@ -9,7 +9,7 @@
 $black: #000;
 
 $white: #fff;
-$blue: #1057A2;
+$blue: #005EB8; 
 $red: red;
 $silver: #cdcdcd;
 $grey :#767676;
@@ -64,17 +64,15 @@ $font-size-base: 1rem; // this can only have a REM unit, PX will cause an error
 $line-height-base: 1.5;
 
 $link-color: $blue;
-
+$link-color-hover: lighten($link-color, 25%);
 
 
 // navbar items
 $navbar-brand-padding-y: 10px;
 $navbar-brand-margin-end: 5px;
+$navbar-link-color: $link-color;
+$navbar-link-color-hover: $link-color-hover;
 
-// root times
-:root{
- 
-}
 
 
 /* custom variable values:END */
