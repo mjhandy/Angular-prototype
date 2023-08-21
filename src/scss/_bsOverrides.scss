@@ -1,16 +1,17 @@
 /// 
 /// Boostrap Overrides
 /// 
-/// @author Mark Handy
-/// @name Boostrap Variable Overrides
-/// @group variables
+/// 
+
+// set the prefix
+$prefix: mjh-;
 
 
+// colours 
 $black: #000;
 
 $white: #fff;
-$blue: #005EB8; 
-$red: red;
+$blue: #005EB8;
 $silver: #cdcdcd;
 $grey :#767676;
 $platinum: #E5E4E2;
@@ -18,55 +19,49 @@ $platinum: #E5E4E2;
 $borderColour: lighten($grey, 10);
 
 /// Grid breakpoints Updates
-/// @type Breakpoint
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1600px);
 
 /// Container max widths
-/// @type Container
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px);
 
 
 /// Control the default styling of most Bootstrap elements by modifying these
 /// variables. Mostly focused on spacing.
-/// You can add more entries to the $spacers map, should you need more variation.
-/// 
-/// @type Variable
 $spacer: 10px;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge((0: 0,
-        1: ($spacer * 0.5), // 5px
-        2: $spacer,         // 10px
-        3: ($spacer * 1.5), // 15px
-        4: ($spacer * 2),   // 20px
-        5: ($spacer * 2.5), // 25px
-        6: ($spacer * 3),   // 30px
-        7: ($spacer * 3.5)  // 35px
-    ), $spacers);
+    1: ($spacer * 0.5), // 5px
+    2: $spacer, // 10px
+    3: ($spacer * 1.5), // 15px
+    4: ($spacer * 2), // 20px
+    5: ($spacer * 2.5), // 25px
+    6: ($spacer * 3), // 30px
+    7: ($spacer * 3.5) // 35px
+  ), $spacers);
 // This variable affects the `.h-*` and `.w-*` classes.
 
 $sizes: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $sizes: map-merge((25: 25%,
-        33: 33%,
-        50: 50%,
-        75: 75%,
-        100: 100%,
-        auto: auto),
-    $sizes);
-    
-// Typography
-$h1-font-size : 3rem;
-$h2-font-size : 2.5rem;
+    33: 33%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto), $sizes);
 
+// Typography
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 $font-size-base: 1rem; // this can only have a REM unit, PX will cause an error
 $line-height-base: 1.5;
 
-$link-color: $blue;
-$link-color-hover: lighten($link-color, 25%);
+$h1-font-size : $font-size-base * 3;
+$h2-font-size : $font-size-base * 2.5;
 
-$prefix: mjh-;
+$link-color: $blue;
+$link-color-hover: darken($link-color, 5%);
+
+
 
 // navbar items
 $navbar-brand-padding-y: 10px;

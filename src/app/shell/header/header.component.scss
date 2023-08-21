@@ -29,7 +29,7 @@
   --#{$prefix}navbar-active-color: #{$navbar-link-color-hover};
   &-brand{
     &:focus-visible{
-      @include outline();
+      @include outline(0);
     }
   }
 }
