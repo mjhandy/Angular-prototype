@@ -6,13 +6,22 @@
 @import "dropdown";
 @import 'buttons';
 
+
 .nav{
-  &-link{
-    color: $navbar-link-color;
-    font-weight: 700;
-    &:hover{
-      color: $navbar-link-color-hover;
-    }
-  }
+  --#{$prefix}nav-link-color: #{$navbar-link-color};
+  --#{$prefix}nav-link-hover-color: #{$navbar-link-color-hover};
+  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+  --#{$prefix}nav-link-font-size: 22px;
   
+  &-link{
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+  }
 }
+
+.navbar{
+  --#{$prefix}navbar-color: #{$navbar-link-color};
+  --#{$prefix}navbar-hover-color: #{$navbar-link-color-hover};
+
+}
+

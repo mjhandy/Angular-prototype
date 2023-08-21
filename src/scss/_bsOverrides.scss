@@ -66,12 +66,16 @@ $line-height-base: 1.5;
 $link-color: $blue;
 $link-color-hover: lighten($link-color, 25%);
 
+$prefix: mjh-;
 
 // navbar items
 $navbar-brand-padding-y: 10px;
 $navbar-brand-margin-end: 5px;
 $navbar-link-color: $link-color;
 $navbar-link-color-hover: $link-color-hover;
+$navbar-brand-font-size: 18px;
+$nav-link-font-weight: 700;
+$nav-link-font-size: 18px;
 
 
 
