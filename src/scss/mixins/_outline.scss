@@ -1,0 +1,4 @@
+@mixin outline(){
+  outline: 2px dotted var(--mjh-blue);
+  box-shadow: none;
+}

@@ -12,16 +12,38 @@
   --#{$prefix}nav-link-hover-color: #{$navbar-link-color-hover};
   --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-font-size: 22px;
+  --#{$prefix}-dropdown-link-color: #{$navbar-link-color};
   
   &-link{
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: 1px;
+    &:focus-visible{
+      @include outline();
+    }
   }
 }
 
 .navbar{
   --#{$prefix}navbar-color: #{$navbar-link-color};
   --#{$prefix}navbar-hover-color: #{$navbar-link-color-hover};
-
+  --#{$prefix}navbar-active-color: #{$navbar-link-color-hover};
+  &-brand{
+    &:focus-visible{
+      @include outline();
+    }
+  }
 }
 
+.dropdown{
+  &-menu{
+    --#{$prefix}dropdown-link-color: #{$navbar-link-color};
+    --#{$prefix}dropdown-link-hover-color: #{$navbar-link-color-hover};
+  } 
+  &-item{
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+    &:focus-visible{
+      @include outline();
+    }
+  }
+}
