@@ -3,6 +3,7 @@
 
 @import 'nav';
 @import 'navbar';
+@import 'offcanvas';
 @import "dropdown";
 @import 'buttons';
 
@@ -13,10 +14,16 @@
   --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-font-size: 22px;
   --#{$prefix}-dropdown-link-color: #{$navbar-link-color};
+  // off canvas items
+  --#{$prefix}--offcanvas-width: 70%;
   
   &-link{
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: 1px;
+    color: $white;
+    @include media-breakpoint-up(lg){
+      color: $black;
+    }
     &:focus-visible{
       @include outline();
     }
@@ -30,6 +37,14 @@
   &-brand{
     &:focus-visible{
       @include outline(0);
+    }
+  }
+  &-toggler{
+    border: 0;
+    position: absolute;
+    right: 0;
+    &:focus{
+      @include outline();
     }
   }
 }
