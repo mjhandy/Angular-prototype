@@ -70,7 +70,7 @@
     --#{$prefix}dropdown-bg: transparent;
     --#{$prefix}dropdown-border-color: none;
     @include media-breakpoint-up(lg){
-      --#{$prefix}dropdown-bg: $white;
+      --#{$prefix}dropdown-bg: #{$white};
       --#{$prefix}dropdown-link-color: #{$navbar-link-color-lg};
       --#{$prefix}dropdown-link-hover-color: #{$navbar-link-color-hover-lg};
     }
