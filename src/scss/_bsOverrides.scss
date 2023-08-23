@@ -66,13 +66,18 @@ $link-color-hover: darken($link-color, 5%);
 // navbar items
 $navbar-brand-padding-y: 10px;
 $navbar-brand-margin-end: 5px;
-$navbar-link-color: $link-color;
-$navbar-link-color-hover: $link-color-hover;
 $navbar-brand-font-size: 18px;
+
+$navbar-link-color: $white;
+$navbar-link-color-lg: $link-color;
+$navbar-link-color-hover: $white;
+$navbar-link-color-hover-lg: $link-color-hover;
+
 $nav-link-font-weight: 700;
 $nav-link-font-size: 18px;
 
 $offcanvas-bg-color: $blue;
+$offcanvas-horizontal-width: 75%
 
 
 
