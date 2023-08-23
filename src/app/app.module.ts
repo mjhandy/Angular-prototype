@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { ShellModule } from './shell/shell/shell.module';
 
+import { HomeModule } from './pages/home/home.module';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { ShellModule } from './shell/shell/shell.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ShellModule
+    ShellModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
