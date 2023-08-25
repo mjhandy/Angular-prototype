@@ -91,3 +91,22 @@
     justify-content: end;
   }
 }
+
+// profile drop down
+.profile{
+  @include media-breakpoint-up(lg){
+    position: absolute;
+    right: 10px;
+
+  }
+  .dropdown-menu{
+    --#{$prefix}dropdown-min-width: 10px;
+    @include media-breakpoint-up(lg){
+      left: -10px;
+    }
+  }
+  > a{
+    width: 100%;
+    text-align: right;
+  }
+}
