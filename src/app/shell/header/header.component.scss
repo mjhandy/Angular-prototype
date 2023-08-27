@@ -33,6 +33,11 @@
   --#{$prefix}navbar-color: #{$navbar-link-color};
   --#{$prefix}navbar-hover-color: #{$navbar-link-color-hover};
   --#{$prefix}navbar-active-color: #{$navbar-link-color};
+  --#{$prefix}navbar-toggler-padding-y: 0;
+  --#{$prefix}navbar-toggler-padding-x: 0;
+  --#{$prefix}navbar-brand-margin-end: 0;
+  --#{$prefix}navbar-brand-padding-y: 0;
+  --#{$prefix}navbar-brand-padding-x: 0;
 
   @include media-breakpoint-up(lg) {
     --#{$prefix}navbar-color: #{$navbar-link-color-lg};
@@ -48,9 +53,6 @@
 
   &-toggler {
     border: 0;
-    position: absolute;
-    right: 0;
-
     &:focus {
       @include outline();
     }
