@@ -23,12 +23,6 @@
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
-    // color: $navbar-link-color;
-
-    @include media-breakpoint-up(lg) {
-      // color: $navbar-link-color-lg;
-    }
-
     &:focus-visible {
       @include outline();
     }
