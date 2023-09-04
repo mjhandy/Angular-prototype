@@ -13,13 +13,13 @@ const routes: Routes = [
     path: 'terms-conditions', loadChildren: () => import('./pages/terms/terms.module').then(m => m.TermsModule) 
   },
   { 
-    path: 'typography', loadChildren: () => import('./pages/typography/typography.module').then(m => m.TypographyModule) 
+    path: 'pages/typography', 
+    loadChildren: () => import('./pages/typography/typography.module').then(m => m.TypographyModule) 
   },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
