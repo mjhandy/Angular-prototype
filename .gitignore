@@ -3,3 +3,6 @@
 *.int
 *.lk
 *.zip
+*.pack
+.angular
+node_modules
