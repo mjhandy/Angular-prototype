@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -16,7 +16,12 @@ export class AppComponent {
 
   constructor(
     private router: Router,
-  ) { }
+    public translate: TranslateService
+  ) { 
+    translate.addLangs(['en-ca' ]);
+    translate.setDefaultLang('en-ca');
+    translate.use('en-ca');
+  }
 
   ngOnInit() {
     // skip to main
