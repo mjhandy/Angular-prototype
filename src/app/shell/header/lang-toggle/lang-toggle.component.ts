@@ -41,8 +41,11 @@ export class LangToggleComponent {
   }
 
   checkLang(){
-    console.log('check lang');
-    localStorage.setItem('lang', this.translate.currentLang);
+    const currentLang = localStorage.getItem('lang');
+
+    if (!currentLang){
+      localStorage.setItem('lang', this.translate.currentLang);
+    }
   }
 
 }
