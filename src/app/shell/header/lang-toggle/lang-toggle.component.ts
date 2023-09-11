@@ -38,4 +38,8 @@ export class LangToggleComponent {
     localStorage.setItem('lang', lang);
   }
 
+  checkLang(){
+    
+  }
+
 }
