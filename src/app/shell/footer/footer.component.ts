@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'footer',
   templateUrl: './footer.component.html',

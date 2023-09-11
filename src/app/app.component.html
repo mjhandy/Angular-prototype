@@ -1,4 +1,7 @@
 <a href="javascript:void(0)" (click)="skipToMain('main')" class="skipToMain">Skip to main</a>
+<select #selLang (change)="translateLanguageTo(selLang.value)">
+  <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+</select>
 <header></header>
 <main id="main" class="noFocusOutline">
   <router-outlet></router-outlet>
