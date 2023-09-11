@@ -15,6 +15,8 @@ import {NgFor, NgForOf} from "@angular/common";
 })
 export class LangToggleComponent {
 
+
+
   constructor(
     public translate: TranslateService,
   ) {
@@ -38,6 +40,7 @@ export class LangToggleComponent {
   translateLanguageTo(lang: string){
     this.translate.use(lang);
     localStorage.setItem('lang', lang);
+
   }
 
   checkLang(){
@@ -45,6 +48,7 @@ export class LangToggleComponent {
 
     if (!currentLang){
       localStorage.setItem('lang', this.translate.currentLang);
+      
     }
   }
 

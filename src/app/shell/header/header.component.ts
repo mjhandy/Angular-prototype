@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { LoginComponent } from './login/login.component';
-import { LangToggleComponent } from './lang-toggle/lang-toggle.component';
+import { LangToggleComponent } from '../../shared/lang-toggle/lang-toggle.component';
 
 @Component({
   selector: 'header',
