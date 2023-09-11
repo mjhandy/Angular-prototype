@@ -26,10 +26,12 @@ export class LangToggleComponent {
     translate.use('en-ca');
   }
 
-  ngOninit() {
+  ngOnInit() {
     // language 
-    console.debug('lang:', this.translate.currentLang);
-    localStorage.setItem('lang', this.translate.currentLang);
+    console.log('lang:', this.translate.currentLang);
+    
+
+    this.checkLang();
   }
 
   //switch languages and set lang in local storage
@@ -39,7 +41,8 @@ export class LangToggleComponent {
   }
 
   checkLang(){
-    
+    console.log('check lang');
+    localStorage.setItem('lang', this.translate.currentLang);
   }
 
 }
