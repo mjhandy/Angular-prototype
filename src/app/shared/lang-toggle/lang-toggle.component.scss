@@ -1,4 +1,16 @@
+@import '../../../scss/bsOverrides';
+@import '.. /../../scss/componentInclude';
+
 select{
+  color: var(--mjh-primary);
   text-transform: uppercase;
   border: 0;
+  padding: 5px;
+  &:focus {
+    @include outline();
+  }
+  option{
+    padding: 5px 2px;
+    color: var(--mjh-primary);
+  }
 }

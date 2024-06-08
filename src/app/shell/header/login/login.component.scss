@@ -4,3 +4,10 @@
 
 @import 'buttons';
 @import 'modal';
+@import 'close';
+
+.btn-login{
+  &:focus {
+    @include outline();
+  } 
+}
