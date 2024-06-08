@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserModule, Meta } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,29 +21,22 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,    
-    FooterComponent
-  ],
-  imports: [
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader:{
-        provide: TranslateLoader,
-        useFactory: httpTranslateLoaderFactory,
-        deps:[
-          HttpClient
-        ]
-      }
-    }),
-    HeaderComponent,
-    BrowserModule,
-    AppRoutingModule,
-    MaterialModule,
-    SvgIconModule    
-  ],
-  providers: [Meta],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        FooterComponent
+    ],
+    bootstrap: [AppComponent], imports: [TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: httpTranslateLoaderFactory,
+                deps: [
+                    HttpClient
+                ]
+            }
+        }),
+        HeaderComponent,
+        BrowserModule,
+        AppRoutingModule,
+        MaterialModule,
+        SvgIconModule], providers: [Meta, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
