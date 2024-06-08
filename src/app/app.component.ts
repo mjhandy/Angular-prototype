@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { SeoService } from './services/seo.service';
+import { filter, map, mergeMap, tap } from 'rxjs/operators';
 
 
 
@@ -10,11 +12,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng16App';
+  title = 'ng Prototpe App';
   skipLinkPath: string | undefined;
 
   constructor(
-    private router: Router,    
+    private router: Router,
+    private activatedRoute: ActivatedRoute, 
+    private seoService: SeoService
   ) { 
 
   }
@@ -22,6 +26,21 @@ export class AppComponent {
   ngOnInit() {
     // skip to main
     this.skipLinkPath = `${this.router.url}#main`;
+
+    this.router.events.pipe(
+      filter(e => e instanceof NavigationEnd),
+      map(e => this.activatedRoute),
+      map((route) => {
+        while (route.firstChild) route = route.firstChild;
+        return route;
+      }),
+      filter((route) => route.outlet === 'primary'),
+      mergeMap((route) => route.data),
+    ).subscribe(data => {
+      let seoData = data['seo'];
+      this.seoService.updateTitle(seoData['title']);
+      this.seoService.updateMetaTags(seoData['metaTags']);
+    });
 
   }
 
