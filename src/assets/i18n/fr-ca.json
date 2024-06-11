@@ -1,10 +1,10 @@
 {
   "nav":{
-    "typography" : "Typography FR"
+    "typography" : "Typographie"
   },
   "footer" : {
     "siteName" : "MJH FR",
-    "privacy" : "Privacy Policy FR",
-    "terms" : "Terms & Conditions FR"
+    "privacy" : "politique de confidentialité",
+    "terms" : "termes et conditions"
   }
 }
