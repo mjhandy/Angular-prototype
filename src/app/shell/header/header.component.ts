@@ -4,8 +4,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { LoginComponent } from './login/login.component';
 import { LangToggleComponent } from '../../shared/lang-toggle/lang-toggle.component';
+import { LoginComponent } from './login/login.component';
+import { LocalStorageService } from 'src/app/services/local-storage-service';
+
 
 @Component({
   selector: 'header',
@@ -20,6 +22,18 @@ import { LangToggleComponent } from '../../shared/lang-toggle/lang-toggle.compon
     LangToggleComponent ]
 })
 export class HeaderComponent {
+  constructor(
+    private LocalStorageSerivce: LocalStorageService,
+  ){
 
+  }
 
+ 
+  
+
+  ngOnInit(){
+    let lang = this.LocalStorageSerivce.getItem('lang');
+
+    console.debug('header lang get from local storage:', lang); 
+  }
 }

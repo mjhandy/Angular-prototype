@@ -3,6 +3,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 import {NgFor, NgForOf} from "@angular/common";
 
+import { LocalStorageService } from 'src/app/services/local-storage-service';
+
 @Component({
   selector: 'app-lang-toggle',
   templateUrl: './lang-toggle.component.html',
@@ -19,18 +21,19 @@ export class LangToggleComponent {
 
   constructor(
     public translate: TranslateService,
+    private LocalStorageSerivce: LocalStorageService,
   ) {
     translate.addLangs([
-      'en-ca', 
-      'fr-ca'
+      'en-CA', 
+      'fr-CA'
     ]);
-    translate.setDefaultLang('en-ca');
-    translate.use('en-ca');
+    translate.setDefaultLang('en-CA');
+    translate.use('en-CA');
   }
 
   ngOnInit() {
     // language 
-    console.log('lang:', this.translate.currentLang);
+    console.log('Lang Toggle lang:', this.translate.currentLang);
     
 
     this.checkLang();
@@ -39,15 +42,15 @@ export class LangToggleComponent {
   //switch languages and set lang in local storage
   translateLanguageTo(lang: string){
     this.translate.use(lang);
-    localStorage.setItem('lang', lang);
+    this.LocalStorageSerivce.setItem('lang', lang);
 
   }
 
   checkLang(){
-    const currentLang = localStorage.getItem('lang');
+    const currentLang = this.LocalStorageSerivce.getItem('lang');
 
     if (!currentLang){
-      localStorage.setItem('lang', this.translate.currentLang);
+      this.LocalStorageSerivce.setItem('lang', this.translate.currentLang);
       
     }
   }

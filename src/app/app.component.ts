@@ -27,6 +27,7 @@ export class AppComponent {
     // skip to main
     this.skipLinkPath = `${this.router.url}#main`;
 
+    // reouter based meta tags
     this.router.events.pipe(
       filter(e => e instanceof NavigationEnd),
       map(e => this.activatedRoute),

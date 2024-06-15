@@ -5,13 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'en',
+    redirectTo: 'en-CA',
     pathMatch: 'full'
   },
   { 
-    path: 'en', 
+    path: 'en-CA', 
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
-    title: 'Home Page | Ng Prototype',
+    title: 'English Home Page | Ng Prototype',
     data:{
       seo:{
         
