@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SeoService } from './seo.service';
+import { SeoService } from '../shared/services/seo.service';
 
 describe('SeoService', () => {
   let service: SeoService;

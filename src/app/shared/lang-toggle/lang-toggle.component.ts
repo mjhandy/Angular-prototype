@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
-import {NgFor, NgForOf} from "@angular/common";
+import { NgFor, NgForOf} from "@angular/common";
 
-import { LocalStorageService } from 'src/app/services/local-storage-service';
+import { LocalStorageService } from 'src/app/shared/services/local-storage-service';
 
 @Component({
   selector: 'app-lang-toggle',
@@ -51,6 +51,7 @@ export class LangToggleComponent {
 
     if (!currentLang){
       this.LocalStorageSerivce.setItem('lang', this.translate.currentLang);
+      console.debug('Initial language as been set')
       
     }
   }

@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { LangToggleComponent } from '../../shared/lang-toggle/lang-toggle.component';
 import { LoginComponent } from './login/login.component';
-import { LocalStorageService } from 'src/app/services/local-storage-service';
+import { LocalStorageService } from 'src/app/shared/services/local-storage-service';
 
 
 @Component({

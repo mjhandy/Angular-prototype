@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-import { SeoService } from './services/seo.service';
+import { SeoService } from './shared/services/seo.service';
 import { filter, map, mergeMap, tap } from 'rxjs/operators';
 
 
