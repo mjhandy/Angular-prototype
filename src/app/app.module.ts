@@ -15,28 +15,33 @@ import { FooterComponent } from './shell/footer/footer.component';
 // material items
 import { MaterialModule } from './shared/material/material.module';
 import { SvgIconModule } from './shared/svg-icon/svg-icon.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
-@NgModule({ declarations: [
-        AppComponent,
-        FooterComponent
-    ],
-    bootstrap: [AppComponent], imports: [TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: httpTranslateLoaderFactory,
-                deps: [
-                    HttpClient
-                ]
-            }
-        }),
-        HeaderComponent,
-        BrowserModule,
-        AppRoutingModule,
-        MaterialModule,
-        SvgIconModule], providers: [Meta, provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  declarations: [
+    AppComponent,
+    FooterComponent
+  ],
+  bootstrap: [AppComponent], imports: [TranslateModule.forRoot({
+    loader: {
+      provide: TranslateLoader,
+      useFactory: httpTranslateLoaderFactory,
+      deps: [
+        HttpClient
+      ]
+    }
+  }),
+    HeaderComponent,
+    BrowserModule,
+    AppRoutingModule,
+    MaterialModule,
+    SvgIconModule,
+    NgbModule], 
+  providers: [Meta, provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule { }

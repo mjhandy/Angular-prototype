@@ -2,3 +2,9 @@
 @import '../../../../scss/componentInclude';
 
 @import 'carousel';
+
+.carousel{
+  &-img-wrap{
+    img{ width: 100%;}
+  }
+}

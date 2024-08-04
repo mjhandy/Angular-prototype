@@ -1,0 +1,87 @@
+@import '../../../../scss/bsOverrides';
+@import '../../../../scss/componentInclude';
+
+@import 'nav';
+@import 'navbar';
+@import 'offcanvas';
+@import "dropdown";
+@import 'buttons';
+
+
+.nav {
+  
+  --#{$prefix}nav-link-hover-color: #{$nav-link-hover-color};
+  --#{$prefix}nav-link-disabled-color: #{$nav-link-disabled-color};
+  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+  --#{$prefix}nav-link-font-size: 16px;
+  @include media-breakpoint-up(lg) {    
+    --#{$prefix}nav-link-hover-color: #{$navbar-link-color-hover-lg};
+  }  
+
+  // off canvas items
+  &-link {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:focus-visible {
+      @include outline();
+    }
+  }
+}
+
+.navbar {
+  --#{$prefix}navbar-color: #{$navbar-link-color};
+  --#{$prefix}navbar-hover-color: #{$navbar-link-color-hover};
+  --#{$prefix}navbar-active-color: #{$navbar-link-color};
+  --#{$prefix}navbar-toggler-padding-y: 0;
+  --#{$prefix}navbar-toggler-padding-x: 0;
+  --#{$prefix}navbar-brand-margin-end: 0;
+  --#{$prefix}navbar-brand-padding-y: 0;
+  --#{$prefix}navbar-brand-padding-x: 0;
+
+  @include media-breakpoint-up(lg) {
+    --#{$prefix}navbar-color: #{$navbar-link-color-lg};
+    --#{$prefix}navbar-hover-color: #{$navbar-link-color-hover-lg};    
+    --#{$prefix}navbar-active-color: #{$navbar-link-color-hover-lg};
+  }  
+
+  &-brand {
+    &:focus-visible {
+      @include outline(0);
+    }
+  }
+
+  &-toggler {
+    border: 0;
+    &:focus {
+      @include outline();
+    }
+  }
+}
+
+.dropdown {
+  &-menu {
+    --#{$prefix}dropdown-link-color: #{$navbar-link-color};
+    --#{$prefix}dropdown-link-hover-color: #{$navbar-link-color-hover};
+    --#{$prefix}dropdown-link-hover-bg: transparent;
+    --#{$prefix}dropdown-bg: transparent;
+    --#{$prefix}dropdown-border-color: none;
+    @include media-breakpoint-up(lg){
+      --#{$prefix}dropdown-bg: #{$white};
+      --#{$prefix}dropdown-link-color: #{$navbar-link-color-lg};
+      --#{$prefix}dropdown-link-hover-color: #{$navbar-link-color-hover-lg};
+    }
+  }
+
+  &-item {
+    &:focus-visible {
+      @include outline();
+    }
+  }
+}
+
+.offcanvas {
+  &-header {
+    justify-content: end;
+  }
+}
