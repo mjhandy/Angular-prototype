@@ -45,7 +45,7 @@ const routes: Routes = [
     }
   },
   { 
-    path: 'en/pages/typography', 
+    path: 'en/typography', 
     loadChildren: () => import('./pages/typography/typography.module').then(m => m.TypographyModule),
     title: 'Typography | Ng Prototype',
     data:{
