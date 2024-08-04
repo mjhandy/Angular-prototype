@@ -5,11 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'en-CA',
+    redirectTo: 'en',
     pathMatch: 'full'
   },
   { 
-    path: 'en-CA', 
+    path: 'en', 
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
     title: 'English Home Page | Ng Prototype',
     data:{
@@ -21,7 +21,7 @@ const routes: Routes = [
     }
   },
   { 
-    path: 'en-CA/privacy-policy', 
+    path: 'en/privacy-policy', 
     loadChildren: () => import('./pages/privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule),
     title: 'Privacy Policy | Ng Prototype',
     data:{
@@ -33,7 +33,7 @@ const routes: Routes = [
     }
   },
   { 
-    path: 'en-CA/terms-conditions', 
+    path: 'en/terms-conditions', 
     loadChildren: () => import('./pages/terms/terms.module').then(m => m.TermsModule),
     title: 'Terms & Conditions | Ng Prototype',
     data:{
@@ -45,7 +45,7 @@ const routes: Routes = [
     }
   },
   { 
-    path: 'en-CA/pages/typography', 
+    path: 'en/pages/typography', 
     loadChildren: () => import('./pages/typography/typography.module').then(m => m.TypographyModule),
     title: 'Typography | Ng Prototype',
     data:{

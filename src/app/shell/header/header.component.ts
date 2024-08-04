@@ -24,11 +24,7 @@ import { LocalStorageService } from 'src/app/shared/services/local-storage-servi
 export class HeaderComponent {
   constructor(
     private LocalStorageSerivce: LocalStorageService,
-  ){
-
-  }
-
- 
+  ){}
   
 
   ngOnInit(){

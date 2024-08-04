@@ -17,6 +17,7 @@ import { LocalStorageService } from 'src/app/shared/services/local-storage-servi
 })
 export class LangToggleComponent {
 
+    
 
 
   constructor(
@@ -24,11 +25,11 @@ export class LangToggleComponent {
     private LocalStorageSerivce: LocalStorageService,
   ) {
     translate.addLangs([
-      'en-CA', 
-      'fr-CA'
+      'en', 
+      'fr'
     ]);
-    translate.setDefaultLang('en-CA');
-    translate.use('en-CA');
+    translate.setDefaultLang('en');
+    translate.use('en');
   }
 
   ngOnInit() {
