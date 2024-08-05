@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { LocalStorageService } from 'src/app/shared/services/local-storage-service';
 import { NgbNav, NgbDropdownModule  } from '@ng-bootstrap/ng-bootstrap';
-import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,8 +9,7 @@ import {RouterModule} from '@angular/router';
   imports: [
     TranslateModule, 
     NgbNav, 
-    NgbDropdownModule,
-    RouterModule 
+    NgbDropdownModule 
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
