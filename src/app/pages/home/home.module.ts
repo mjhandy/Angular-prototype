@@ -9,12 +9,11 @@ import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    
+    CarouselComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
-    CarouselComponent
+    HomeRoutingModule
   ]
 })
 export class HomeModule { }

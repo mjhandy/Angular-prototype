@@ -1,16 +1,20 @@
-<button class="btn btn-login" (click)="openVerticallyCentered(content)"> Login/Register </button>
-<ng-template [ngIf]="!loggedIn" #content let-modal>
-  <div class="modal-content">
-    <div class="modal-header">
-      <h1 class="modal-title fs-5" id="loginModalLabel">Login/Register</h1>
-      <button type="button" class="btn-close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-      ...
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-primary">Save changes</button>
-      <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+<ng-container ngIf="!loggedIn">
+  <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal"> Login/Register </button>
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Login/Register</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>          
+        </div>
+      </div>
     </div>
   </div>
-</ng-template>
+</ng-container>
