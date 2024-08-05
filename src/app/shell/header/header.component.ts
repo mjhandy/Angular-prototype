@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { LangToggleComponent } from '../../shared/lang-toggle/lang-toggle.component';
+import { LangToggleComponent } from './lang-toggle/lang-toggle.component';
 import { LoginComponent } from './login/login.component';
 import { LocalStorageService } from 'src/app/shared/services/local-storage-service';
 
