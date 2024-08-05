@@ -26,9 +26,6 @@
     &:focus-visible {
       @include outline();
     }
-    @include media-breakpoint-up(sm){
-      color: $white;
-    }
   }
 }
 
@@ -86,10 +83,5 @@
 .offcanvas {
   &-header {
     justify-content: end;
-  }
-  &.show{
-    a{
-      color: #fff;
-    }
   }
 }
