@@ -1,7 +1,7 @@
 <ng-container ngIf="!loggedIn">
   <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal"> Login/Register </button>
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="loginModalLabel">Login/Register</h1>
@@ -11,8 +11,8 @@
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>          
+          <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>          
         </div>
       </div>
     </div>
