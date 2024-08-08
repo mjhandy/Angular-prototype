@@ -56,6 +56,18 @@ const routes: Routes = [
       }
     }
   },
+  { 
+    path: 'en/forms/account-signup', 
+    loadChildren: () => import('./pages/forms/account-signup/account-signup.module').then(m => m.AccountSignupModule),
+    title: 'Account Signup | Ng Prototype',
+    data:{
+      seo:{        
+        metaTags:[
+          {name: 'description', content:'This is an example Account Signup form.'}
+        ]
+      }
+    }
+  },
 ];
 
 @NgModule({
